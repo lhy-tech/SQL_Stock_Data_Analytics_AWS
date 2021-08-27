@@ -1,0 +1,13 @@
+SELECT T1.STK_CD
+	   ,T1.STK_NM
+       ,T1.SEC_NM
+       ,T1.EX_CD
+       ,T2.DT
+       ,T2.C_PRC
+       ,T2.VOL 거래량
+       ,ROUND(T2.VOL * T2.C_PRC / 1e8, 1) '거래금액(억)'
+FROM STOCK T1
+	 INNER JOIN HISTORY_DT T2 ON (T2.STK_CD = T1.STK_CD)
+WHERE T2.DT = STR_TO_DATE('20190108', '%Y%m%d')
+AND   T1.STK_NM LIKE '삼성%'
+ORDER BY T2.VOL * T2.C_PRC DESC;
