@@ -1,1 +1,7 @@
-# SQL_Stock_Data_Analytics_AWS
+## 해당 프로젝트의 과정은 다음과 같습니다.
+### 1. AWS EC2에서 인스턴스를 생성해 PUBLIC IP 발급
+### 2. 구글 코랩 환경에서 생성한 PUBLIC IP를 이용해 SQL과 연결
+### 3. 파이썬 financedatareader 라이브러리를 사용해 종가 데이터를 불러옴
+### 4. SQL에 저장된 기업 데이터를 이용해 기업 재무제표를 분석
+### 5. 머신러닝 fbprophet을 이용해 주식 종가 예측
+### 6. 이동평균을 이용해 주식 종가 예측
